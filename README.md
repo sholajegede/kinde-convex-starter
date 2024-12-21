@@ -55,6 +55,11 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 Update the `.env.local` file with your **Kinde** and **Convex** credentials:
 ```
+# Deployment used by `npx convex dev`
+CONVEX_DEPLOYMENT=your_convex_deployment
+NEXT_PUBLIC_CONVEX_URL=https://your_convex_deployment.convex.cloud
+NEXT_PUBLIC_CONVEX_HTTP_URL=https://your_convex_deployment.convex.site
+
 KINDE_CLIENT_ID=your_kinde_client_id
 KINDE_CLIENT_SECRET=your_kinde_client_secret
 KINDE_ISSUER_URL=https://your_kinde_subdomain.kinde.com
