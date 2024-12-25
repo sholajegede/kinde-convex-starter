@@ -35,7 +35,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## 🛠️ Setting up your own Kinde instance
+## 🛠️ Setting up your own Kinde and Convex instances
 Follow the instructions in [https://docs.convex.dev/auth/kinde#get-started](https://docs.convex.dev/auth/kinde#get-started) to obtain your **Kinde** and **Convex** credentials.
 
 Update the `.env.local` file with your obtained credentials:
