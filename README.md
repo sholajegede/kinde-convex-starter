@@ -1,22 +1,7 @@
-# Kinde-Convex File Sharing App: Part 1
-A fully pre-configured Next.js application to kickstart your development with Kinde and Convex, enabling secure authentication, real-time data syncing, and role-based access control (RBAC). This app serves as a foundational template for building scalable, secure, and user-friendly file-sharing applications.
+# Users and Authentication Example App
+This example demonstrates how to add users and authentication to a basic file sharing application. It uses [Kinde](https://kinde.com) for authentication.
 
-## 🚀Features
-- Passwordless Authentication: Enable seamless logins with Kinde's secure authentication services.
-- Social Login Integration: Support for Google, Facebook, and GitHub sign-ins.
-- Real-Time Data Management: Powered by Convex, ensuring real-time updates between the frontend and backend.
-- Role-Based Access Control (RBAC): Assign and manage roles like Admins and Members to restrict or enable access to features.
-- Webhook Integration: Sync user authentication events to your database in real-time.
-- Pre-Styled UI Components: Built using Shadcn and TailwindCSS for a responsive and intuitive design.
-
-## 🎓What You'll Learn
-This repository demonstrates how to:
-- Integrate Kinde into your Next.js project for authentication.
-- Configure Convex for database and backend API functions.
-- Implement RBAC for secure feature control.
-- Use webhooks to synchronize user data and events.
-- Protect routes with middleware.
-- Fetch and display user data dynamically.
+Users are initially presented with **Get started** and **Log in** buttons. After user's sign up, their information is sent through a webhook and persisted to a `users` table on Convex. Users can also sign up and log in with passwordless authentication, social logins and have access to role-based access control.
 
 ## 🛠️ Prerequisites
 Before you begin, ensure you have the following:
@@ -50,10 +35,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## 🛠️ Prerequisites
-**Environment Variables**
+## 🛠️ Setting up your own Kinde instance
+Follow the instructions in [https://docs.convex.dev/auth/kinde#get-started](https://docs.convex.dev/auth/kinde#get-started) to obtain your **Kinde** and **Convex** credentials.
 
-Update the `.env.local` file with your **Kinde** and **Convex** credentials:
+Update the `.env.local` file with your obtained credentials:
 ```
 # Deployment used by `npx convex dev`
 CONVEX_DEPLOYMENT=your_convex_deployment
@@ -80,22 +65,6 @@ The schema is pre-configured to store user data, including email, roles, and pre
 - **/providers**: Custom providers for Kinde and Convex integration.
 - **/components**: Reusable UI components styled with TailwindCSS and Shadcn.
 - **middleware.ts**: Middleware to protect routes.
-
-## 🛡️ Role-Based Access Control (RBAC)
-This app demonstrates RBAC with the following roles:
-- **Admin**: Full control, including deleting files.
-- **Member**: Restricted access, such as uploading files only.
-RBAC is configured via Kinde's dashboard, where you can assign roles and permissions to users.
-
-## 🌐 Deploy on Vercel
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-## 📝 What's Next?
-**Part 2: Advanced RBAC Implementation**
-In the next installment, learn how to:
-- Configure advanced permissions for granular control.
-- Implement RBAC checks on API endpoints and the frontend.
-- Build a production-grade file-sharing application.
 
 ## 💬 Feedback
 We’d love to hear from you!
